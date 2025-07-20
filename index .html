@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coach Emmanuel | Affiliate Transformation</title>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4fdf7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      background-color: #0f9d58;
+      color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+    }
+
+    .logo {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    section {
+      background: #ffffff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    button {
+      background-color: #0f9d58;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0c7b43;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #0f9d58;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 15px;
+      margin-top: 30px;
+    }
+
+    .highlight {
+      color: #0f9d58;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="https://i.ibb.co/3rGyFzF/coach-emmanuel-logo.jpg" alt="Coach Emmanuel" class="logo" />
+      <h1>Coach Emmanuel’s Affiliate Transformation System</h1>
+      <p>Earn online with just your phone, using strategies that work in Africa — no experience needed.</p>
+    </header>
+
+    <section>
+      <h2>🔥 The Problem You’re Facing</h2>
+      <p>You’re tired of waking up broke, seeing others make money online while you're stuck. You’ve tried methods that didn’t work. You want something that is real, simple, and finally pays you for your effort.</p>
+    </section>
+
+    <section>
+      <h2>🎯 What You’ll Learn</h2>
+      <ul>
+        <li>How to earn <strong>400 GHS weekly</strong> with your smartphone</li>
+        <li>Affiliate marketing made easy (no talking to family or friends)</li>
+        <li>Monetize TikTok, WhatsApp, and simple AI tools</li>
+        <li>WhatsApp automation system that sells for you</li>
+        <li>Private mentorship with me, Coach Emmanuel</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Why This Works</h2>
+      <p>This system works because it was built for Africans like you. No complex websites, no ads, no skills required. Just follow the videos and you’ll start earning with what you already use — your phone + data.</p>
+    </section>
+
+    <section>
+      <h2>✅ Join Now — Just 119 GHS</h2>
+      <p>One-time payment gives you lifetime access to all videos, strategies, templates, automation systems, and my private coaching group.</p>
+      <button onclick="payWithPaystack()">Pay Now to Join</button>
+      <p id="paymentStatus" style="margin-top: 10px;"></p>
+    </section>
+
+    <section id="channel" style="display:none;">
+      <h2>🎉 Welcome Onboard!</h2>
+      <p>Join any of the private groups below:</p>
+      <ul>
+        <li><a href="https://t.me/+t_XdHhkSOWszMmFk" target="_blank">Group 1</a></li>
+        <li><a href="https://t.me/+qjxMBjWE77c0YmY0" target="_blank">Group 2</a></li>
+        <li><a href="https://t.me/+LH6Fv4HspjJlOTM0" target="_blank">Group 3</a></li>
+      </ul>
+    </section>
+
+    <div class="contact">
+      📩 Contact: <a href="mailto:kwabenaemma0554263293@gmail.com">kwabenaemma0554263293@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    function payWithPaystack() {
+      let handler = PaystackPop.setup({
+        key: 'pk_live_ddbf47d168d6849ef29050ffc35c98a12e11e38b',
+        email: 'user@example.com',
+        amount: 119 * 100,
+        currency: 'GHS',
+        callback: function(response){
+          document.getElementById("paymentStatus").textContent = "✅ Payment successful!";
+          document.getElementById("channel").style.display = "block";
+        },
+        onClose: function(){
+          alert('Payment window closed.');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
+</body>
+</html>
